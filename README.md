@@ -1,1 +1,3 @@
-# csharp-modulo-03
+# Rocketseat journey c-sharp
+
+- Minha Primeira API
