@@ -1,14 +1,17 @@
 namespace MyFirstApi.Controllers;
 
 using Microsoft.AspNetCore.Mvc;
+using MyFirstApi.Entities;
 
 public class DeviceController : MyFirstApiBaseController
 {
     [HttpGet]
     public IActionResult Get()
     {
-        Autor = "maria";
+        var laptop = new Laptop();
 
-        return Ok(Autor);
+        var model = laptop.GetBrand();
+
+        return Ok(model);
     }
 }
