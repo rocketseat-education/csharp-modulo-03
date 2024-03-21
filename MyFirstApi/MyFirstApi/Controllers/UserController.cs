@@ -4,8 +4,6 @@ using MyFirstApi.Communication.Responses;
 
 namespace MyFirstApi.Controllers;
 
-[Route("api/[controller]")]
-[ApiController]
 public class UserController : MyFirstApiBaseController
 {
     [HttpGet]
