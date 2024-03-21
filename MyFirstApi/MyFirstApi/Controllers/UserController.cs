@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
+using MyFirstApi.Communication.Requests;
+using MyFirstApi.Communication.Responses;
 
 namespace MyFirstApi.Controllers;
 
@@ -20,5 +22,18 @@ public class UserController : ControllerBase
         };
 
         return Ok(response);
+    }
+
+    [HttpPost]
+    [ProducesResponseType(typeof(ResponseRegisteredUserJson), StatusCodes.Status201Created)]
+    public IActionResult Create([FromBody] RequestRegisterUserJson request)
+    {
+        var response = new ResponseRegisteredUserJson
+        {
+            Id = 1,
+            Name = request.Name
+        };
+
+        return Created(string.Empty, response);
     }
 }
