@@ -6,6 +6,12 @@ public class Laptop : Device
     {
         return "Apple";
     }
+
+    public override string Hello()
+    {
+        return base.Hello();
+    }
+    
     public string GetModel()
     {
         var isConnected = IsConnected();
